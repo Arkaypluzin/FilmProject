@@ -18,7 +18,7 @@ useEffect(()=>{
     getData(url)
   },[])
 
-
+    
     return(
         <div>
           <p>home page</p>
@@ -28,7 +28,7 @@ useEffect(()=>{
           boucle en affichent tout le contenue*/}
           <p> {userData.original_title} </p>
            
-          {userData.original_title && userData.original_title.map((item,index) =>  (<img key={index} src= {`https://image.tmdb.org/t/p/w500/${item}`} alt=""/>))}
+          {userData.results && userData.results.map((items,index) =>  (<img key={index} src= {`https://image.tmdb.org/t/p/w500/${items.poster_path}`} alt=""/>))}
             
         </div>
     )
