@@ -26,8 +26,7 @@ useEffect(()=>{
           <p>home page</p>
           
           
-          {/* Là je défini si userData.genres est défini ou non nul, s'il existe le .map est enclencher pour faire la 
-          boucle en affichent tout le contenue*/}
+          
           <p> {userData.original_title} </p>
            
           <h1>popular movie</h1>
