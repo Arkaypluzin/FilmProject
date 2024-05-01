@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";
+import { NavLink } from "react-router-dom";
+import PrintPictures from "./Components/PrintPictures";
 
 
 
@@ -32,13 +34,11 @@ useEffect(()=>{
           {userData.results && userData.results.map((items) =>  (
 
             <li key={items.id}>
-              
-              <a href={`http://localhost:3000/page/${items.id}`} ><img
-                src={`https://image.tmdb.org/t/p/w300/${items.poster_path}`}
-                alt={`${items.title} Poster`}/>
+              <NavLink to={`page/${items.id}`}>
+                <PrintPictures info={items.poster_path}/>
                 <h2>{items.title}</h2>
-              </a>
-              
+               
+              </NavLink>
             </li>
               
          ))}

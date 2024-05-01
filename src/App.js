@@ -16,16 +16,14 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
-      {loading ? (
-        <LoadingScreen />
-      ) : (
-        <Routes>
-          <Route path="HomePage" element={<HomePage />} />
-          <Route path="FilmList" element={<FilmList />} />
-        </Routes>
-      )}
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='page/:id' element={<Page/>}/>
+          </Routes>
+        </BrowserRouter>
+    </div>
   );
 }
 
