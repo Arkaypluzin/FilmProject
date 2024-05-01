@@ -28,8 +28,23 @@ useEffect(()=>{
           boucle en affichent tout le contenue*/}
           <p> {userData.original_title} </p>
            
-          {userData.results && userData.results.map((items,index) =>  (<img key={index} src= {`https://image.tmdb.org/t/p/w500/${items.poster_path}`} alt=""/>))}
-            
+          <h1>popular movie</h1>
+          {userData.results && userData.results.map((items) =>  (
+
+            <li key={items.id}>
+              
+              <a href={`http://localhost:3000/page/${items.id}`} ><img
+                src={`https://image.tmdb.org/t/p/w300/${items.poster_path}`}
+                alt={`${items.title} Poster`}/>
+                <h2>{items.title}</h2>
+              </a>
+              
+            </li>
+              
+         ))}
+         
+         
+        
         </div>
     )
 
