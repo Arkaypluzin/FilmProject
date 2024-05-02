@@ -1,5 +1,7 @@
 import React,{useEffect, useState} from "react";
-
+import LogoNetlfix from '../assets/netflix.png'
+import { NavLink } from "react-router-dom";
+import './SearchBar.css';
 
 const SearchBar = () => {
     
@@ -18,20 +20,26 @@ useEffect(()=>{
     getData(url)
   },[searchValue])
 
+      return (
+          <header>
+            <NavLink to = {'/'}>
+                <img src={LogoNetlfix} alt="Netflix" className="Header-logo" />
+              </NavLink>
+              
+          <div class = "SearchBar">
 
-    return (
-        <div>
-            
-            <input type="text" placeholder="write here" onChange={(event)=> setSearchValue(event.target.value)} />
-            {userData.results && userData.results.map((items) =>  (
-                
-                <a href={`http://localhost:3000/page/${items.id}`} >
-                    <h2>{items.title}</h2>
-                </a>
-                
-            ))}
-        </div>
-    )
-}
+              <input type="text" placeholder="search film" onChange={(event)=> setSearchValue(event.target.value)} />
+              {userData.results && userData.results.map((items) =>  (
+                  
+                  <a href={`/page/${items.id}`} >
+                      <h3>{items.title}</h3>
+                  </a>
+                  
+              ))}
+          </div>
+          </header>
+      )
+  }
+  
 
 export default SearchBar;

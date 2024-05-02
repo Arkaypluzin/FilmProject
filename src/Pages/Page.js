@@ -3,6 +3,7 @@ import { NavLink, useParams } from "react-router-dom";
 import PrintPictures from "../Components/PrintPictures";
 import HandlerSimilarFilm from "../Components/HandlerSimilarFilm";
 import SearchBar from "../Components/SearchBar";
+import './page.css';
 
 const Page = () => {
     const {id} = useParams();
@@ -28,19 +29,24 @@ useEffect(()=>{
     return(
         <div>
             <SearchBar/>
-            <p>page</p>
             {<PrintPictures  info={userData.poster_path} />}
             {<PrintPictures  info={userData.backdrop_path} />}
 
+            <div class ="film-description">
+            {userData.title}
+            <br />
             {userData.genres && userData.genres.map((items,index)=>(
-             <li key={index}>{items.name} </li>)   
+             <p key={index}>{items.name} </p>)   
             )}
+            {userData.release_date}
             <br />
             {userData.overview}
             <br />
             {userData.vote_average}
-
+            <br />
+            <h2>Films suggestion</h2>
             <HandlerSimilarFilm info={{id}}/>
+            </div>
 
 
             

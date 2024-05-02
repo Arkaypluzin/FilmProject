@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import PrintPictures from "./Components/PrintPictures";
 import HandlerSimilarFilm from "./Components/HandlerSimilarFilm";
 import SearchBar from "./Components/SearchBar";
+import './Components/Home.css';
 
 
 
@@ -24,25 +25,24 @@ useEffect(()=>{
 
     
     return(
-        <div>
+        <div class = "Home">
 
           <SearchBar/>
-          <p>home page</p>
           
           
           
           <p> {userData.original_title} </p>
            
-          <h1>popular movie</h1>
+          <h1>popular movies</h1>
           {userData.results && userData.results.map((items) =>  (
 
-            <li key={items.id}>
+            <a key={items.id}>
               <NavLink to={`page/${items.id}`}>
                 <PrintPictures info={items.poster_path}/>
                 <h2>{items.title}</h2>
                
               </NavLink>
-            </li>
+            </a>
               
          ))}
          

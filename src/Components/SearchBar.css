@@ -1,0 +1,41 @@
+.SearchBar {
+    width: 30%;
+    margin-left: 59%;
+    border-radius: 5px;
+}
+
+.SearchBar input[type="text"] {
+    width: 100%;
+    border: 1px solid #fdfdfd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.SearchBar a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.SearchBar a:hover {
+    color: #007bff;
+}
+
+.SearchBar h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.Header-logo {
+    width:100px;
+}
