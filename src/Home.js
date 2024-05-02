@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import PrintPictures from "./Components/PrintPictures";
+import HandlerSimilarFilm from "./Components/HandlerSimilarFilm";
 
 
 
@@ -42,6 +43,7 @@ useEffect(()=>{
               
          ))}
          
+         <HandlerSimilarFilm/>
          
         
         </div>
