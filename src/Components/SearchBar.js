@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from "react";
-import PrintPictures from "./PrintPictures";
-import { NavLink } from "react-router-dom";
+
+
 
 const SearchBar = () => {
     
@@ -25,10 +25,11 @@ useEffect(()=>{
             
             <input type="text" placeholder="write here" onChange={(event)=> setSearchValue(event.target.value)} />
             {userData.results && userData.results.map((items) =>  (
-                <NavLink to={`page/${items.id}`}>
-                    
+                
+                <a href={`http://localhost:3000/page/${items.id}`} >
                     <h2>{items.title}</h2>
-                </NavLink>
+                </a>
+                
             ))}
         </div>
     )
