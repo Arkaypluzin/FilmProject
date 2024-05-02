@@ -1,0 +1,15 @@
+Notre projet consiste à intégrer l'API de The Movie Database dans notre application React. L'API de TMDb nous offre un accès à une vaste base de données de films. En l'intégrant à notre application React, nous avons pu produire une interface dans laquelle se trouve les films ainsi qu'une barre de recherche. Il y a aussi l'affichage de détails sur les films, les critiques, ainsi que des recommandations proposés par le site. Notre application promet une expérience immersive et engageante pour tous les utilisateurs.
+
+Comment l'installer : 
+
+Télécharger le projet qui est "FilmProject"
+
+Placer le dossier dans un endroit facile à trouver 
+
+Ouvrir le terminal et aller à l'emplacement du projet exemple :
+
+michael@MacBook-Pro-de-Michael ~ % cd desktop
+michael@MacBook-Pro-de-Michael desktop % cd FilmProject
+michael@MacBook-Pro-de-Michael FilmProject
+
+enfin faire npm install puis npm start pour découvrir une expérience exceptionelle
