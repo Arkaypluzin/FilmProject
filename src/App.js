@@ -1,5 +1,4 @@
 import './App.css';
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import Page from './Pages/Page';
@@ -7,7 +6,9 @@ import LoadingScreen from './Components/LoadingScreen';
 import { useEffect, useState } from 'react';
 
 
-const App = () => {
+
+function App() {
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,6 +16,7 @@ const App = () => {
       setLoading(false);
     }, 3000);
   }, []);
+
 
   return (
     <div className="App">
