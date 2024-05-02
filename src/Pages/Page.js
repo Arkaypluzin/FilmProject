@@ -27,8 +27,8 @@ useEffect(()=>{
     return(
         <div>
             <p>page</p>
-            {<PrintPictures info={userData.poster_path} />}
-            {<PrintPictures info={userData.backdrop_path} />}
+            {<PrintPictures  info={userData.poster_path} />}
+            {<PrintPictures  info={userData.backdrop_path} />}
 
             {userData.genres && userData.genres.map((items,index)=>(
              <li key={index}>{items.name} </li>)   

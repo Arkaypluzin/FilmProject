@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import PrintPictures from "./Components/PrintPictures";
 import HandlerSimilarFilm from "./Components/HandlerSimilarFilm";
+import SearchBar from "./Components/SearchBar";
 
 
 
@@ -24,6 +25,8 @@ useEffect(()=>{
     
     return(
         <div>
+
+          <SearchBar/>
           <p>home page</p>
           
           
@@ -43,7 +46,7 @@ useEffect(()=>{
               
          ))}
          
-         <HandlerSimilarFilm/>
+      
          
         
         </div>
