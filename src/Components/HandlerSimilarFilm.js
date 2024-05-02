@@ -25,8 +25,8 @@ const HandlerSimilarFilm = () => {
         <div>
             {userSimilar.results && userSimilar.results.map((items)=>( 
             <p key={items.id}>
-                <a href={`http://localhost:3000/page/${items.id}`}>{<PrintPictures info={items.poster_path}/>}
-                    <h2>{items.title}</h2></a>
+                    <a href={`http://localhost:3000/page/${items.id}`}>{<PrintPictures info={items.poster_path}/>}
+                        <h2>{items.title}</h2></a>
             </p>
           ))}
         </div>

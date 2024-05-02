@@ -5,7 +5,7 @@ const PrintPictures = ({info}) => {
     return(
         <div>
             <img
-                src={`https://image.tmdb.org/t/p/w500/${info}`}
+                src={`https://image.tmdb.org/t/p/w300/${info}`}
                 alt=""/>
         </div>
     )

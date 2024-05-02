@@ -45,7 +45,7 @@ useEffect(()=>{
             {userData.vote_average}
             <br />
             <h2>Films suggestion</h2>
-            <HandlerSimilarFilm info={{id}}/>
+              <HandlerSimilarFilm info={{id}}/>
             </div>
 
 
