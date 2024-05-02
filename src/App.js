@@ -1,12 +1,14 @@
 import './App.css';
-import { useState, useEffect } from 'react';
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from './HomePage';
-import FilmList from './FilmList';
-import LoadingScreen from './LoadingScreen'; // Importez le composant LoadingScreen
+import Home from './Home';
+import Page from './Pages/Page';
+import LoadingScreen from './Components/LoadingScreen';
+import { useEffect, useState } from 'react';
 
-const App = () => {
+
+
+function App() {
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,17 +17,20 @@ const App = () => {
     }, 3000);
   }, []);
 
+
   return (
-    <BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
       {loading ? (
         <LoadingScreen />
       ) : (
-        <Routes>
-          <Route path="HomePage" element={<HomePage />} />
-          <Route path="FilmList" element={<FilmList />} />
-        </Routes>
-      )}
-    </BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='page/:id' element={<Page/>}/>
+          </Routes>
+          )}
+        </BrowserRouter>
+    </div>
   );
 }
 
