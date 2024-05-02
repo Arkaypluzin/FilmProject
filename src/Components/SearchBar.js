@@ -25,7 +25,7 @@ useEffect(()=>{
             <input type="text" placeholder="write here" onChange={(event)=> setSearchValue(event.target.value)} />
             {userData.results && userData.results.map((items) =>  (
                 
-                <a href={`http://localhost:3000/page/${items.id}`} >
+                <a href={`/page/${items.id}`} >
                     <h2>{items.title}</h2>
                 </a>
                 
