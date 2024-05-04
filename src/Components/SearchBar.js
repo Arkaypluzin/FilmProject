@@ -21,23 +21,29 @@ useEffect(()=>{
   },[searchValue])
 
       return (
-          <header>
+    <div>
+        <header>
             <NavLink to = {'/'}>
                 <img src={LogoNetlfix} alt="Netflix" className="Header-logo" />
-              </NavLink>
-              
-          <div class = "SearchBar">
-
-              <input type="text" placeholder="search film" onChange={(event)=> setSearchValue(event.target.value)} />
-              {userData.results && userData.results.map((items) =>  (
-                  
-                  <a href={`/page/${items.id}`} >
-                      <h3>{items.title}</h3>
-                  </a>
-                  
-              ))}
-          </div>
-          </header>
+            </NavLink>
+        
+            <div class = "SearchBar">
+                <input type="text" placeholder="search film" onChange={(event)=> setSearchValue(event.target.value)} />
+        
+            </div>
+        </header>
+        
+            <span>
+                    {userData.results && userData.results.map((items) =>  (
+        
+                        <a href={`/page/${items.id}`} >
+                            <h3>{items.title}</h3>
+                        </a>
+        
+                    ))}
+                </span>
+    </div>
+        
       )
   }
   

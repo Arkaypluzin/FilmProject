@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import { NavLink, useParams } from "react-router-dom";
-import PrintPictures from "../Components/PrintPictures";
 import HandlerSimilarFilm from "../Components/HandlerSimilarFilm";
 import SearchBar from "../Components/SearchBar";
 import './page.css';
@@ -29,24 +28,41 @@ useEffect(()=>{
     return(
         <div>
             <SearchBar/>
-            {<PrintPictures  info={userData.poster_path} />}
-            {<PrintPictures  info={userData.backdrop_path} />}
-
-            <div class ="film-description">
-            {userData.title}
-            <br />
-            {userData.genres && userData.genres.map((items,index)=>(
-             <p key={index}>{items.name} </p>)   
-            )}
-            {userData.release_date}
-            <br />
-            {userData.overview}
-            <br />
-            {userData.vote_average}
-            <br />
+           
+            <div className="div-pictures">
+              <div class ="film-description">
+                <div className="description-header">
+                  <h1 className="header-title">{userData.title}</h1>
+                  <h2>Date :</h2>
+                  <p className="header-date"> {userData.release_date}</p>
+                </div>
+                <br />
+                <h2>Categories :</h2>
+                {userData.genres && userData.genres.map((items,index)=>(
+                  
+                  <p className="header-genres">  {items.name} </p>)   
+                )}
+                
+                <br />
+                <div className="header-evaluation">
+                  <h2 className="evaluation-title">Evaluation : </h2>
+                  <p className="evaluation-info">{userData.vote_average}/10</p>
+                </div>
+                <br />
+                <h2 >Overview : </h2>
+                <p className="header-overview">{userData.overview}</p>
+                <br />
+                
+                <br />
+              </div>
+              <div>
+                <img className="pictures-poster" src={`https://image.tmdb.org/t/p/w500/${userData.poster_path}`} alt=""/>
+              </div>
+              
+            </div>
             <h2>Films suggestion</h2>
               <HandlerSimilarFilm info={{id}}/>
-            </div>
+            
 
 
             

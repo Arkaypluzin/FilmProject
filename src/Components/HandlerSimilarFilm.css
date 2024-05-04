@@ -1,18 +1,20 @@
-body, p, h1, h2, h4, h5, h6, span, div, a, button, textarea {
-    color: white;
+.Similar_movie {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+.Similar_movie p a{
+    text-transform: none;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    
+.Similar_movie::-webkit-scrollbar{
+    display: none;
 }
 
-h1{
-    text-align: left;
-    margin-left: 51px;
-}
+
 
 .slider {
     display: flex;
@@ -52,11 +54,12 @@ h1{
     position: absolute;
     width: 300px;
     height: 450px;
-    top: 0%;
+    top: 3%;
     display: block;
     font-size: 16px;
     opacity: 0;
     margin: 0 auto;
+    
     
     text-transform: none;
 
@@ -70,6 +73,7 @@ h1{
     margin-left: 20px;
     font-weight: bolder;
     font-size: 16px;
+    
 }
 .header-date{
     font-size: 16px;

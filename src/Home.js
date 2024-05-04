@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
-import PrintPictures from "./Components/PrintPictures";
-import HandlerSimilarFilm from "./Components/HandlerSimilarFilm";
 import SearchBar from "./Components/SearchBar";
 import './Components/Home.css';
 
@@ -23,6 +21,7 @@ useEffect(()=>{
     getData(url)
   },[])
 
+
     
     return(
         <div class = "Home">
@@ -33,19 +32,39 @@ useEffect(()=>{
           
           <p> {userData.original_title} </p>
            
-          <h1>popular movies</h1>
-          {userData.results && userData.results.map((items) =>  (
+          <h1>Popular movies</h1>
+          <div className="slider-container">
+            
+            <div class="slider">
+            
+              {userData.results && userData.results.map((items) =>  (
+            
+                <a class="slide">    
+                  <NavLink  to={`page/${items.id}`}>
+                    <div className="slide-img">
+                      <img src={`https://image.tmdb.org/t/p/w300/${items.poster_path}`}alt=""/>
+                    </div>
+                    <span className="slide-span">
 
-            <a key={items.id}>
-              <NavLink to={`page/${items.id}`}>
-                <PrintPictures info={items.poster_path}/>
-                <h2>{items.title}</h2>
-               
-              </NavLink>
-            </a>
+                      <span className="span-header">
+                        <p className="header-title">{items.title} </p>
+                        <p className="header-date">Date : {items.release_date}</p>
+                      </span>
+                      <p className="span-scores"> Scores : {items.popularity} </p>
+                      <p className="span-overview"style={{ maxHeight: "200px", overflowY: "auto" }}>Resume : {items.overview} <br /></p>
+                      
+                    </span>
+                  </NavLink>
+                </a>
+               ))}
+           
+            
+                    
+            
               
-         ))}
-         
+             
+            </div>
+          </div>
       
          
         

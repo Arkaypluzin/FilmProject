@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import PrintPictures from "./PrintPictures"
-
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "./HandlerSimilarFilm.css";
 
 
 
@@ -22,11 +21,24 @@ const HandlerSimilarFilm = () => {
 
 
     return (
-        <div>
+        <div class="slider">
             {userSimilar.results && userSimilar.results.map((items)=>( 
-            <p key={items.id}>
-                    <a href={`http://localhost:3000/page/${items.id}`}>{<PrintPictures info={items.poster_path}/>}
-                        <h2>{items.title}</h2></a>
+            <p>
+                    <a href={`http://localhost:3000/page/${items.id}`}> 
+                        <div className="slide-img">
+                            <img src={`https://image.tmdb.org/t/p/w300/${items.poster_path}`}alt=""/>
+                        </div>
+                        <span className="slide-span">
+                            
+                            <span className="span-header">
+                                <p className="header-title">{items.title} </p>
+                                <p className="header-date">Date : {items.release_date}</p>
+                            </span>
+                            <p className="span-scores"> Scores : {items.popularity} </p>
+                            <p className="span-overview"style={{ maxHeight: "200px", overflowY: "auto" }}>Resume : {items.overview} <br /></p>
+                            
+                        </span>
+                    </a>
             </p>
           ))}
         </div>
