@@ -28,9 +28,7 @@ useEffect(()=>{
 
           <SearchBar/>
           
-          
-          
-          <p> {userData.original_title} </p>
+        
            
           <h1>Popular movies</h1>
           <div className="slider-container">

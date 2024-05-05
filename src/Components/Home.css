@@ -9,9 +9,13 @@ body{
     
 }
 
+
+
 h1{
     text-align: left;
     margin-left: 51px;
+    padding-top: 100px;
+    margin-bottom: 40px;
 }
 
 .slider {
