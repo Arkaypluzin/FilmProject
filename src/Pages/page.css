@@ -1,49 +1,118 @@
 
-.div-pictures{
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Div-pictures{
     display: flex;
+    padding-bottom: 320px;
+    padding-top: 81px;
 }
 
 
 .film-description{
     display: block;
-}
-.header-title{
-    text-align: center;
-    font-size: 24px;
+    width: 560px;
+    height: 310px;
+    margin-left: 60px;
+    margin-top: 111px;
+   
 }
 
-.film-description h2{
-    text-align: left;
-    margin-left: 20px;
+
+
+.background-image{
+    opacity: 0.25;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 650px;
+    flex-shrink: 0;
+    object-fit: cover;
+    padding-bottom: 50px;
+
+   
 }
-.header-evaluation{
+
+
+
+.description-title{
+    color: #FFF;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.75rem; 
     text-align: left;
+    margin-bottom: 10px;
+}
+.description-date{
+    color: #FFF;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 350;
+    line-height: normal;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.description-categories{
+    color: #FFF;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.description-overview{
+    width: 560px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+.description-name{
+    margin-right: 12px;
+    margin-bottom: 20px;
+}
+
+.description-genres{
     display: flex;
 }
-
-.evaluation-title{
+.description-evaluation{
+    display: flex;
+    margin-bottom: 20px;
     
-    font-weight: bolder;
-    margin-left: 20px;
+}
+.evaluation-title{
+    margin-right: 12px;
+    color: #FFF;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .evaluation-info{
-    margin-top: 28px;
-    padding-left: 12px;
-
+    margin-top: 8px;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
-.header-date{
-    text-align: center;
-    margin-left: 20px;
-}
-
-.header-overview{
-    margin-left: 20px;
-    width: 90%;
-}
-
-h2{
+.description-overview{
     text-align: left;
-    margin-left: 20px;
+}
+.div{
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.div-title{
+    text-align: left;
+    margin-bottom: 40px;
+    color: #FFF;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.75rem; /* 125% */
 }

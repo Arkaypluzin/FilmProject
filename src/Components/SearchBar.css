@@ -46,6 +46,13 @@ header{
     font-weight: bold;
 }
 
-.Header-logo {
-    width:100px;
+.Header-logo_netflix {
+    width:60px;
+}
+
+.wrapper{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: black;
 }

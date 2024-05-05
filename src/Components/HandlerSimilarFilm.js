@@ -21,21 +21,21 @@ const HandlerSimilarFilm = () => {
 
 
     return (
-        <div class="slider">
+        <div class="Slider">
             {userSimilar.results && userSimilar.results.map((items)=>( 
             <p>
                     <a href={`http://localhost:3000/page/${items.id}`}> 
                         <div className="slide-img">
                             <img src={`https://image.tmdb.org/t/p/w300/${items.poster_path}`}alt=""/>
-                        </div>
-                        <span className="slide-span">
+                        </div> 
+                        <span className="Slide-span">
                             
-                            <span className="span-header">
-                                <p className="header-title">{items.title} </p>
-                                <p className="header-date">Date : {items.release_date}</p>
+                            <span className="Span-header">
+                                <p className="Header-title">{items.title} </p>
+                                <p className="Header-date">Date : {items.release_date}</p>
                             </span>
-                            <p className="span-scores"> Scores : {items.popularity} </p>
-                            <p className="span-overview"style={{ maxHeight: "200px", overflowY: "auto" }}>Resume : {items.overview} <br /></p>
+                            <p className="Span-scores"> Scores : {items.popularity} </p>
+                            <p className="Span-overview"style={{ maxHeight: "200px", overflowY: "auto" }}>Resume : {items.overview} <br /></p>
                             
                         </span>
                     </a>

@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react";
-import LogoNetlfix from '../assets/netflix.png'
+import LogoNetlfix from '../assets/netflixLogo.png'
 import { NavLink } from "react-router-dom";
 import './SearchBar.css';
 
@@ -21,10 +21,10 @@ useEffect(()=>{
   },[searchValue])
 
       return (
-    <div>
+    <div className="wrapper">
         <header>
             <NavLink to = {'/'}>
-                <img src={LogoNetlfix} alt="Netflix" className="Header-logo" />
+                <img src={LogoNetlfix} alt="Netflix" className="Header-logo_netflix" />
             </NavLink>
         
             <div class = "SearchBar">
